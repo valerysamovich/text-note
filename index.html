@@ -4,19 +4,32 @@
   <head>
     <title>AngularJS Fundamentals</title>
   </head>
-  <body ng-init="customers=[{ name: 'John Smith', city: 'Phoenix' },
-                          { name: 'John Doe', city: ' New York'},
-                          { name: 'Jane Doe', city: 'San Francisco'}]">
+  <body>
+    <!--Use ng-controller to call the Simple Controller-->
+    <div ng-controller="SimpleController">
 
-    <!--Data Binding - bind the data as typing-->
-    Name:<input type="text" ng-model="name" />{{ name }}<br />
+      <!--Data Binding - bind the data as typing-->
+      Name:<input type="text" ng-model="name" />{{ name }}<br />
 
-    <ul>
-      <!--ng-repeat Directive to call customers and
-        applyed Filters to sort by name and order by city-->
-      <li ng-repeat="customer in customers | filter:name | orderBy:'city'">
-        {{ customer.name }} - {{ customer.city }}</li>
-    </ul>
+      <ul>
+        <!--ng-repeat Directive to call customers and
+          applyed Filters to sort by name and order by city-->
+        <li ng-repeat="customer in customers | filter:name | orderBy:'city'">
+          {{ customer.name }} - {{ customer.city }}</li>
+      </ul>
+
+    </div>
+
+    <script>
+      // Controller with passing $scope as the parameter
+      function SimpleController($scope) {
+        $scope.customers =[
+          { name: 'John Smith', city: 'Phoenix' },
+          { name: 'John Doe', city: ' New York'},
+          { name: 'Jane Doe', city: 'San Francisco'}
+        ];
+      }
+    </script>
 
     <!-- AngularJS - Superheroic JavaScript MVW Framework
       https://angularjs.org/ -for more info-->
