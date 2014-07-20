@@ -1,16 +1,21 @@
 <!DOCTYPE html>
+<!--ng-app is initialize the the page as angulaerjs app-->
 <html ng-app="">
   <head>
     <title>AngularJS Fundamentals</title>
   </head>
-  <body ng-init="persons=['John Smith', 'John Doe', 'Jane Doe']">
+  <body ng-init="customers=[{ name: 'John Smith', city: 'Phoenix' },
+                          { name: 'John Doe', city: ' New York'},
+                          { name: 'Jane Doe', city: 'San Francisco'}]">
 
-    <!--example of data binding-->
-    Name:<input type="text" ng-model="name" /> {{ name }} <br />
+    <!--Data Binding-->
+    Name:<input type="text" ng-model="name" />{{ name }}<br />
 
-    <!--example ng-repeat-->
+
     <ul>
-      <li ng-repeat="person in persons">{{ person }}</li>
+      <!--ng-repeat Directive and Filters-->
+      <li ng-repeat="customer in customers | filter:name | orderBy:'city'">
+        {{ customer.name }} - {{ customer.city }}</li>
     </ul>
 
     <script src="scripts/angular.min.js"></script>
