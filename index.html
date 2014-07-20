@@ -3,8 +3,15 @@
   <head>
     <title>AngularJS Fundamentals</title>
   </head>
-  <body>
-    Name:<input type="text" ng-model="name" /> {{ name }}
+  <body ng-init="persons=['John Smith', 'John Doe', 'Jane Doe']">
+
+    <!--example of data binding-->
+    Name:<input type="text" ng-model="name" /> {{ name }} <br />
+
+    <!--example ng-repeat-->
+    <ul>
+      <li ng-repeat="person in persons">{{ person }}</li>
+    </ul>
 
     <script src="scripts/angular.min.js"></script>
   </body>
