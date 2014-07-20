@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!--ng-app is initialize the the page as angulaerjs app-->
-<html ng-app="">
+<!--ng-app is initialize the the page with angularJSFundamentals module-->
+<html ng-app="angularJSFundamentals">
   <head>
     <title>AngularJS Fundamentals</title>
   </head>
   <body>
     <!--Use ng-controller to call the Simple Controller-->
-    <div ng-controller="SimpleController">
+    <div ng-controller="customerController">
 
       <!--Data Binding - bind the data as typing-->
       Name:<input type="text" ng-model="name" />{{ name }}<br />
@@ -17,25 +17,42 @@
         <li ng-repeat="customer in customers | filter:name | orderBy:'city'">
           {{ customer.name }} - {{ customer.city }}</li>
       </ul>
-
     </div>
-    <!--View Model: View<-$scope->Controller
-      View - represent the data, don't design to contain the logic
-      Controller - javascript object, bind the data, connect tho the server
-      $scope - tight the view to the object-->
-    <script>
-      // Controller with passing $scope as the parameter
-      function SimpleController($scope) {
-        $scope.customers =[
-          { name: 'John Smith', city: 'Phoenix' },
-          { name: 'John Doe', city: ' New York'},
-          { name: 'Jane Doe', city: 'San Francisco'}
-        ];
-      }
-    </script>
 
     <!-- AngularJS - Superheroic JavaScript MVW Framework
       https://angularjs.org/ -for more info-->
     <script src="scripts/angular.min.js"></script>
+
+    <!-- View Model: (View->Directives)<-$scope->(Controller->Factory) -->
+    <!-- View - represent the data, don't design to contain the logic
+         Controller - javascript object, bind the data, connect tho the server
+         $scope - tight the view to the object-->
+
+    <!-- Module->Config->Routers->View Model -->
+
+    <script>
+      // Module angularJSFundamentals
+      var angularJSFundamentals = angular.module('angularJSFundamentals', []);
+      /*
+       * 3 Ways to define the Controllers:
+       * 1. Create an external function, pass the function in with controller name
+       * 2. Pass the name as the String with Anonymous function
+       * 3. The example is defined below this comment
+       */
+      // Controllers
+      var controllers = {};
+
+      controllers.customerController = function ($scope) {
+        $scope.customers = [
+          { name: 'John Smith', city: 'Phoenix' },
+          { name: 'John Doe', city: ' New York'},
+          { name: 'Jane Doe', city: 'San Francisco'}
+        ];
+      };
+
+      // Module use with the controller
+      angularJSFundamentals.controller(controllers);
+
+    </script>
   </body>
 </html>
