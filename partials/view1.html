@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>View 1</h2>
+
+  <!--Data Binding - bind the data as typing-->
+  Name:<input type="text" ng-model="filter.name" /><br />
+
+  <ul>
+    <!--ng-repeat Directive to call customers and
+      applyed Filters to sort by name and order by city-->
+    <li ng-repeat="customer in customers | filter:filter.name | orderBy:'city'">
+      {{ customer.name }} - {{ customer.city }}</li>
+  </ul><br />
+
+  Customer name:<input type="text" ng-model="newCustomer.name" /><br />
+  Customer city:<input type="text" ng-model="newCustomer.city" /><br />
+
+  <!--Add new customer with ng-click directive-->
+  <button ng-click="addCustomer()">Add Customer</button>
+
+  <!--Link to View 2-->
+  <a href="#/view2">View 2</a>
+</div>
