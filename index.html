@@ -1,80 +1,13 @@
 <!DOCTYPE html>
-<!--ng-app is initialize the the page with angularJSFundamentals module-->
-<html ng-app="demoApp">
+<!--The <html> element is the container of the AngularJS application: ng-app="myNoteApp"-->
+</html>
+<html ng-app="myNoteApp">
   <head>
-    <title>AngularJS Fundamentals</title>
+    <title></title>
   </head>
   <body>
-    <!--Use ng-controller to call the Simple Controller-->
-    <div>
-      <!--ng-view is a placeholder for the view by route-->
-      <div ng-view=""></div>
-    </div>
 
-    <!-- AngularJS - Superheroic JavaScript MVW Framework
-      https://angularjs.org/ -for more info-->
-    <script src="scripts/angular.min.js"></script>
-    <script src="scripts/angular-route.min.js"></script>
-    <script src="scripts/angular-resource.min.js"></script>
-
-    <!-- View Model: (View->Directives)<-$scope->(Controller->Factory) -->
-    <!-- View - represent the data, don't design to contain the logic
-         Controller - javascript object, bind the data, connect tho the server
-         $scope - tight the view to the object-->
-
-    <!-- Module->Config->Routers->View Model -->
-
-    <script>
-
-      // Module angularJSFundamentals
-      var demoApp = angular.module('demoApp', []);
-
-      /*
-       * Routes: view1, view2
-       */
-      demoApp.config(function ($routeProvider) {
-
-        $routeProvider
-          .when('/view1', {
-            controller: 'simpleController',
-            templateUrl: 'partials/view1.html'
-          })
-          .when('/view2', {
-            controller: 'simpleController',
-            templateUrl: 'partials/view2.html'
-          })
-          .otherwise({
-            redirectTo: '/'
-        });
-
-      });
-
-      /*
-       * Controllers. 3 Ways to define them:
-       * 1. Create an external function and pass it with controller name
-       * 2. Pass the name as the String with Anonymous function
-       * 3. The example is defined below this comment: easy to prototype
-       */
-
-      // Controller with passing name as the string with Anonymous function
-      demoApp.controller('simpleController', function ($scope) {
-
-        // customers
-        $scope.customers = [
-          { name: 'John Smith', city: 'Phoenix' },
-          { name: 'John Doe', city: ' New York'},
-          { name: 'Jane Doe', city: 'San Francisco'}
-        ];
-
-        // add customer
-        $scope.addCustomer = function() {
-          $scope.customers.push({
-            name: $scope.newCustomer.name,
-            city: $scope.newCustomer.city
-          });
-        };
-      });
-
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+    <script src="js/myNoteApp.js"></script>
   </body>
 </html>
