@@ -1,4 +1,4 @@
-angularjs-fundamentals
+text-note
 ======================
 
 Single Page Application with AngularJS
