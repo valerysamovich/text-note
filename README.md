@@ -1,4 +1,4 @@
 text-note
 ======================
 
-Single Page Application with AngularJS
+AngularJS Note Application
