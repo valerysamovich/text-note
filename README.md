@@ -19,5 +19,7 @@ How Does it Work
  - The ng-app directive should be placed at the root element application
  - On or more ng-controllers directives define the application controllers. Each controller has its own scope: the HTML element where they were defined.
 
+Developer info
+--------------
 
 
