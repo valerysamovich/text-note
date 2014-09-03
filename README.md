@@ -1,5 +1,5 @@
 text-note
-======================
+=========
 
 AngularJS Note is a Single Page Application (SPA).
 
