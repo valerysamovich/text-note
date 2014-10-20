@@ -1,7 +1,7 @@
 text-note
 =========
 
-AngularJS Note is a Single Page Application (SPA).
+Note is a Single Page Application (SPA) with AngularJS.
 
 Application Sceleton
 --------------------
