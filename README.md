@@ -16,7 +16,7 @@ How Does it Work
 
  - The recommended placement for AngularJS script tags is at taahe bottom of thr "body" element.
  - Application code (module and controllers) must be loaded after the library.
- - The ng-app directive should be placed at the root element application
+ - The ng-app directive should be placed at the root element application.
  - On or more ng-controllers directives define the application controllers. Each controller has its own scope: the HTML element where they were defined.
 
 Developer
