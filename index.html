@@ -7,33 +7,33 @@
     <title>Note Application</title>
   </head>
 
-    <!--A a <div> in the HTML page
-      is the scope of a controller: ng-controller="myNoteCtrl"-->
+    <!-- A a <div> in the HTML page
+      is the scope of a controller: ng-controller="myNoteCtrl" -->
     <div ng-controller="myNoteCtrl">
 
-      <!--Header element-->
+      <!-- Header element -->
       <h2>My Note</h2>
 
       <p>
-        <!--An ng-model directive binds
-          a <textarea> to the controller variable message-->
+        <!-- An ng-model directive binds
+          a <textarea> to the controller variable message -->
         <textarea ng-model="message" cols="40" rows="10"></textarea>
       </p>
 
       <p>
-        <!--The two ng-click events invoke
-          the controller functions clear() and save()-->
+        <!-- The two ng-click events invoke
+          the controller functions clear() and save() -->
         <button ng_click="save()">Save</button>
         <button ng-click="clear()">Clear</button>
       </p>
 
-      <!--An ng-bind directive binds the controller function left()
-        to a <span> displaying the characters left-->
+      <!-- An ng-bind directive binds the controller function left()
+        to a <span> displaying the characters left -->
       <p>Number of characters left: <span ng-bind="left()"></span></p>
 
     </div>
 
-    <!--The AngularJS library-->
+    <!-- The AngularJS library -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
     <!--The application libraries-->
     <script src="js/myNoteApp.js"></script>
