@@ -6,10 +6,10 @@ Text Note is a Single Page Application (SPA) with AngularJS.
 Application Sceleton
 --------------------
 
- - The `"html"` element is the "container" for the AngularJS application (**ng-app=**).
- - A "div" elements defines the scope of an AngualrJS controller (**ng-controller=**).
+ - The `"html"` element is the "container" for the AngularJS application `(**ng-app=**)`.
+ - A "div" elements defines the scope of an AngualrJS controller `(**ng-controller=**)`.
  - An aplication file(**my...App.js**) defines the application module code.
- - A controller file(s) (**my...Ctrl.js**) defines the controller code.
+ - A controller file(s) `(**my...Ctrl.js**)` defines the controller code.
 
 How Does it Work
 ----------------
