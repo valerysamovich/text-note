@@ -1,4 +1,4 @@
-# Text note
+# text-note
 
 Text Note is a Single Page Application (SPA) with AngularJS.
 
